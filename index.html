@@ -34,22 +34,7 @@
 			{
 				map.setCenter(new daum.maps.LatLng(lat, lng));
 			}
-			function setDraggable(draggable)	// 마우스 드래그로 지도 이동 가능여부 설정				
-			{
-				map.setDraggable(draggable);    
-			}
-			
-			
-			
-			map.setLevel(3);		// 확대/축소 단계 ( 1: 제일 확대, 4:동천컨벤션 글자가 안 보임)(
-			
-			var marker = new daum.maps.Marker({
-				map: map,
-				position: new daum.maps.LatLng(35.561552, 129.348850)
-				text: '동천컨벤션'
-			});	
-			
-			
+			map.setLevel(4);
 		</script>
 		
 	</body>
