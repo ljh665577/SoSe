@@ -1,0 +1,121 @@
+
+body
+{
+	background-color: black;
+}
+
+.wedding-photo img
+{ 
+	width: 80%;
+	background: white;
+	display: block;
+	vertical-align: middle;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top:	4px;
+	margin-bottom:	4px;
+	padding: 4px;
+	border: 10px;
+}
+
+@media(min-width:720px)
+{
+	.wedding-photo img
+	{
+		width:200px;
+		display: inline;
+		margin: 2%;
+		
+	}
+	#img1
+	{
+		margin-left: 5%;
+	}
+	#img4
+	{
+		margin-left: 5%;
+	}
+	#img7
+	{
+		margin-left: 5%;
+	}
+}	
+@media(min-width:1200px)
+{
+	.wedding-photo img
+	{
+		width:300px;
+		display: inline;
+		
+	}
+	#img1
+	{
+		margin-left: 10%;
+	}
+	#img4
+	{
+		margin-left: 10%;
+	}
+	#img7
+	{
+		margin-left: 10%;
+	}
+}
+/* 이미지 콜라주 */ 
+/* 이미지 크기는 최대로 그냥 두고 span에 너비를 지정해서 사용.*/ 
+.imgCollage 
+{ 
+	margin:auto; text-align: center;
+}
+@media screen and (min-width: 768px) 
+{	
+	.imgCollage
+	{ 
+		display:flex;
+		-webkit-flex:auto;
+		-moz-display:flex;
+		-ms-display:flex;
+		flex-wrap:wrap;
+		-webkit-flex-wrap:wrap;
+		-moz-flex-wrap:wrap;
+		-ms-flex-wrap:wrap;
+	}
+	.imgCollage > span 
+	{ 
+		padding: 4px;
+	} 
+	.imgCollage > span > .imageblock:not(:last-child) 
+	{ 
+		vertical-align: baseline; 
+	} 
+	.imgCollage .imageblock 
+	{ 
+		padding:0;
+	} 
+	.imgCollage img
+	{
+		box-shadow: none;
+	} 
+} 
+@media screen and (max-width: 767px)
+{ 
+	.imgCollage > span
+	{ 
+		padding: 0;
+		width: 100% !important;
+	} 
+	.imgCollage .imageblock
+	{
+		padding: 16px 0;
+	} 
+	.imgCollage > span:first-of-type .imageblock:first-of-type
+	{ 
+		padding-top: 8px;
+	} 
+	.imgCollage > span:last-of-type .imageblock:last-of-type
+	{ 
+		padding-bottom: 4px;
+	}
+} 
+/* 이미지 콜라주 끝 */
+		
