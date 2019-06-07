@@ -3,11 +3,16 @@ body
 {
 	background-color: black;
 }
+#kimlink
+{
+	font-size: 45px;
+	text-align: center;
+}
 
 .wedding-photo img
 { 
 	width: 80%;
-	background: white;
+	background: red;
 	display: block;
 	vertical-align: middle;
 	margin-left: auto;
