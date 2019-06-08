@@ -1,70 +1,131 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+
 	<head>
 	<title>운보 & 선희</title>
-	<meta charset="utf-8">
-	<link rel="stylesheet" href="style.css">	
-	<link rel="stylesheet" href="magnific-popup.css">	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style.css">		
 	</head>
 	
+	
 	<body>
-		
+
 		<div id="kimlink">
-			<a href="KIM.html">KIMKIMKIM</a>
+			<a href="KIM.html" font-family="굴림" font-size="10px">킴킴킴</a>
 		</div>
-		
 		<div id="kimlink">
 			<a href="test\test.html">imgSlide</a>
 		</div>
-		
-		
-		
-		
-		
-		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
-		<script src="jquery.magnific-popup.min.js"></script>
-			
 	
-		<div class="wedding-photo">			
-			<a class="popupimg" href="images\wedding1-o.jpg" title="title1">
-				<img src="images\wedding1.jpg" id="img1">
-			</a>
-			<a class="popupimg" href="images\wedding2-o.jpg" title="title2">
-				<img src="images\wedding2.jpg" id="img2">
-			</a>
-			<a class="popupimg" href="images\wedding3-o.jpg" title="title3">
-				<img src="images\wedding3.jpg" id="img3">
-			</a>
-			<a class="popupimg" href="images\wedding4-o.jpg" title="title4">
-				<img src="images\wedding4.jpg" id="img4">
-			</a>
-			<a class="popupimg" href="images\wedding5-o.jpg" title="title5">
-				<img src="images\wedding5.jpg" id="img5">
-			</a>
-			<a class="popupimg" href="images\wedding6-o.jpg" title="title6">
-				<img src="images\wedding6.jpg" id="img6">
-			</a>
-			<a class="popupimg" href="images\wedding7-o.jpg" title="title7">
-				<img src="images\wedding7.jpg" id="img7">
-			</a>
-			<a class="popupimg" href="images\wedding9-o.jpg" title="title9">
-				<img src="images\wedding9.jpg" id="img9">
-			</a>
-		</div>
-		
-		
-		<script type="text/javascript">
+	
+	
+	
+		<h2 style="text-align:center">Lightbox</h2>
 
-			$('.popupimg').magnificPopup({
-			   type: 'image',
-			   closeOnContentClick: true,
-			   closeBtnInside: true,
-			   fixedContentPos: true,
-			   image: {    verticalFit: true    },
-			   gallery: {   enabled: true    }, // 좌우로 사진 돌려보기 생성
-			   zoom: {    enabled: true,   duration: 400    }
-			});
+		<div class="row">
+		  <div class="column">
+			<img src="img1.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+		  </div>
+		  <div class="column">
+			<img src="img2.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+		  </div>
+		  <div class="column">
+			<img src="img3.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+		  </div>
+		  <div class="column">
+			<img src="img4.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+		  </div>
+		</div>
+
+		<div id="myModal" class="modal">
+		  <span class="close cursor" onclick="closeModal()">&times;</span>
+		  <div class="modal-content">
+
+			<div class="mySlides">
+			  <div class="numbertext">1 / 4</div>
+			  <img src="img1-1.jpg" style="width:100%">
+			</div>
+
+			<div class="mySlides">
+			  <div class="numbertext">2 / 4</div>
+			  <img src="img2-1.jpg" style="width:100%">
+			</div>
+
+			<div class="mySlides">
+			  <div class="numbertext">3 / 4</div>
+			  <img src="img3-1.jpg" style="width:100%">
+			</div>
+			
+			<div class="mySlides">
+			  <div class="numbertext">4 / 4</div>
+			  <img src="img4-1.jpg" style="width:100%">
+			</div>
+			
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+			<div class="caption-container">
+			  <p id="caption"></p>
+			</div>
+
+
+			<div class="slidecolumn">
+			  <img class="demo cursor" src="img1-1.jpg" style="width:100%" onclick="currentSlide(1)">
+			</div>
+			<div class="slidecolumn">
+			  <img class="demo cursor" src="img2-1.jpg" style="width:100%" onclick="currentSlide(2)">
+			</div>
+			<div class="slidecolumn">
+			  <img class="demo cursor" src="img3-1.jpg" style="width:100%" onclick="currentSlide(3)">
+			</div>
+			<div class="slidecolumn">
+			  <img class="demo cursor" src="img4-1.jpg" style="width:100%" onclick="currentSlide(4)"">
+			</div>
+		  </div>
+		</div>
+
+		<script>
+			function openModal() {
+			  document.getElementById("myModal").style.display = "block";
+			}
+
+			function closeModal() {
+			  document.getElementById("myModal").style.display = "none";
+			}
+
+			var slideIndex = 1;
+			showSlides(slideIndex);
+
+			function plusSlides(n) {
+			  showSlides(slideIndex += n);
+			}
+
+			function currentSlide(n) {
+			  showSlides(slideIndex = n);
+			}
+
+			function showSlides(n) {
+			  var i;
+			  var slides = document.getElementsByClassName("mySlides");
+			  var dots = document.getElementsByClassName("demo");
+			  var captionText = document.getElementById("caption");
+			  if (n > slides.length) {slideIndex = 1}
+			  if (n < 1) {slideIndex = slides.length}
+			  for (i = 0; i < slides.length; i++) {
+				  slides[i].style.display = "none";
+			  }
+			  for (i = 0; i < dots.length; i++) {
+				  dots[i].className = dots[i].className.replace(" active", "");
+			  }
+			  slides[slideIndex-1].style.display = "block";
+			  dots[slideIndex-1].className += " active";
+			  captionText.innerHTML = dots[slideIndex-1].alt;
+			}
 		</script>
+		
+		
+		
+		
 		
 		
 		
@@ -93,11 +154,13 @@
 			var marker = new daum.maps.Marker({
 				map: map,
 				position: new daum.maps.LatLng(35.561552, 129.348850)
-			});	
-			
+			});
+
+			var iwContent = '<div style="padding:5px;">동천컨벤션웨딩홀</div>'		
+/*			
 			var iwContent = '<div style="padding:5px;">동천컨벤션웨딩홀<br><a href="http://map.daum.net/link/map/동천컨벤션웨딩홀,35.561552,129.348850" style="color:blue" target="_blank">큰지도보기</a> <a href="http://map.daum.net/link/to/동천컨벤션웨딩홀,35.561552,129.348850" style="color:blue" target="_blank" font-family="돋움",dotum, "굴림", gulim, arial>길찾기</a></div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
-			
-			iwPosition = new daum.maps.LatLng(33.450701, 126.570667); //인포윈도우 표시 위치입니다
+*/			
+			iwPosition = new daum.maps.LatLng(35.561552, 129.348850); //인포윈도우 표시 위치입니다
 
 			// 인포윈도우를 생성합니다
 			var infowindow = new daum.maps.InfoWindow({
@@ -105,8 +168,8 @@
 				content : iwContent 
 			});
   
-				// 마커 위에 인포윈도우를 표시합니다. 두번째 파라미터인 marker를 넣어주지 않으면 지도 위에 표시됩니다
 			infowindow.open(map, marker); 
+			// 마커 위에 인포윈도우를 표시합니다. 두번째 파라미터인 marker를 넣어주지 않으면 지도 위에 표시됩니다
 			
 		</script>
 		
@@ -141,17 +204,6 @@
 			</a>
 		</div>
 
-		
-		
-		
-		
-		
-		<p>
-		</p>
-				
-		
-		
-		
 		
 		
 		
