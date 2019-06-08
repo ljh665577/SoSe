@@ -4,12 +4,15 @@
 	<title>운보와 선희의 결혼식에 초대합니다</title>
 	<meta charset="utf-8">
 
+	
+	
 <script language="JavaScript">
 var today = new Date();
 var day2000 = new Date("July 20, 2019");
 var days = Math.ceil((day2000 - today) / 1000 / 24 / 60 / 60);
 // -->
 </script>
+
 
 
 <!--<style>
@@ -19,7 +22,7 @@ background-image: url('wedding6.jpg'); width=600px;
 </style>-->
 
 <style>
-	.WEDDING{
+		.WEDDING{
 	font-size:30px;
 	font-weight:700;
 	letter-spacing:0.35em
@@ -31,20 +34,23 @@ background-image: url('wedding6.jpg'); width=600px;
 	font-weight:900;
 	}
 	
-
-	
+	#grid{
+	border:3px solid red;
+	display:grid;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+	}
 	
 	.abcda{
 	font-size:10px
 	}
 	
-		body{
+	body{
 	text-align:center;
 	display:grid;
-	grid-template-columns:1fr;
-	grid-template-rows:100px; 400px; 100px; 1000px;
+	grid-template-rows:100px 400px 100px 1000px;
 	color:gray;	
 	}
+
 	
 	
 		
@@ -52,14 +58,17 @@ background-image: url('wedding6.jpg'); width=600px;
 </head>
 
 <body>
-
+<div id="grid">
 	<div class="WEDDING">
 	WEDDING INVITATION
 	</div>
+	
+	
 <script language="JavaScript">
-<!--
 document.write("D-" + days)
 </script>
+
+
 <br>
 	<div class="simkim">
 	김선희 ♥ 심운보
@@ -110,6 +119,6 @@ document.write("D-" + days)
 지도 넣기
 </p>
 
-
+</div>
 </body>
 </html>
