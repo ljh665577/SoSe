@@ -21,7 +21,7 @@ var days = Math.ceil((day2000 - today) / 1000 / 24 / 60 / 60);
 div{
 	border:3px solid pink;
 }
-body{
+.mine{
 	text-align:center;
 	color:gray;	
 	}
@@ -83,6 +83,7 @@ body{
 
 <body>
 <div class="grid">
+<div class="mine">
 	<div class="bg">
 	<p class="WEDDING">
 	WEDDING INVITATION
@@ -122,11 +123,11 @@ body{
 	
 	<br><br><br><br>
 	<div class="abcdb">
-	<span class="groom">- GROOM</span> <span class="name">심운보 & 김선희</sapn> 
+	<span class="groom">- GROOM</span> <span class="name">심운보 & 이선희</sapn> 
 	<span class="bride">BRIDE -</span>
 	<p>
 	<span class="b1">심재민 ㅇㅇㅇ의 장남 심운보</span>
-	<p><span class="b2">ㅇㅇㅇ ㅇㅇㅇ의 자녀 김선희</span></p>
+	<p><span class="b2">ㅇㅇㅇ ㅇㅇㅇ의 자녀 이선희</span></p>
 	</p>
 	
 	</div>
@@ -134,23 +135,11 @@ body{
 	<br><br><br><br>
 	<div class="row">
 	Gallery
-		  <div class="column">
-			<img src="images\img1.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
-		  </div>
-		  <div class="column">
-			<img src="images\img2.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
-		  </div>
-		  <div class="column">
-			<img src="images\img3.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
-		  </div>
-		  <div class="column">
-			<img src="images\img4.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
-		  </div>
-		  
-		<div id="map"></div>
+</div>
+</div>
 		  
 		  
-		</div>
+	
 
 		<div id="myModal" class="modal">
 		  <span class="close cursor" onclick="closeModal()">&times;</span>
