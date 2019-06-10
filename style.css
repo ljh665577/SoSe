@@ -1,5 +1,4 @@
 body {
-  font-family: Verdana, sans-serif;
   margin: 0;
 }
 
@@ -7,11 +6,11 @@ body {
   box-sizing: border-box;
 }
 
-.row > .column {
+.rowxx > .column {
   padding: 0 8px;
 }
 
-.row:after {
+.rowxx:after {
   content: "";
   display: table;
   clear: both;
@@ -24,9 +23,11 @@ body {
   margin-left:auto;
   margin-right:auto;
 }
+.thumbnail{
+}
 .slidecolumn {
   float: left;
-  width: 25%;
+  width: 20%;
 }
 
 /* The Modal (background) */
@@ -154,9 +155,44 @@ img.hover-shadow {
 #map
 {
 	width:80%;
-	height:300px;
+	height:250px;
 	background: yellow;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+
+/*****		Where & When		****/
+.section-title h2 {
+    font-size: 40px;
+}
+
+.h1, .h2, .h3, h1, h2, h3 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Noto Sans KR',sans-serif;
+}
+
+h2, .h2{
+	font-size:30px;
+}
+h3, .h3{
+	font-size:20px;
+}
+h1, h1 a, h2, h2 a, h3, h3 a, h4, h4 a, h5, h5 a, h6, h6 a {
+	color:#333333;
+}
+
+h1.inline, h2.inline, h3.inline,
+h4.inline, h5.inline, h6.inline{
+	display:inline;
+	vertical-align:middle;
+}
+
+@media (min-width: 992px)
+.col-md-offset-2 {
+    margin-left: 16.66666667%;
 }

@@ -10,7 +10,7 @@
 	
 	<body>
 
-		<div id="kimlink">
+		<div id="kimlink" style="padding:2px; text-align:center;">
 			<a href="KIM.html" font-family="굴림" font-size="10px">킴킴킴</a>
 		</div>
 		<div id="kimlink">
@@ -22,47 +22,181 @@
 	
 		<h2 style="text-align:center">Lightbox</h2>
 
-		<div class="row">
-		  <div class="column">
-			<img src="images\img1.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
-		  </div>
-		  <div class="column">
-			<img src="images\img2.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
-		  </div>
-		  <div class="column">
-			<img src="images\img3.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
-		  </div>
-		  <div class="column">
-			<img src="images\img4.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
-		  </div>
-		  
-		<div id="map"></div>
-		  
-		  
+		<div class="rowxx">
+			<div class="column">
+				<img src="images\img1.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+			</div>
+			<div class="column">
+				<img src="images\img2.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+			</div>
+			<div class="column">
+				<img src="images\img3.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+			</div>
+			<div class="column">
+				<img src="images\img4.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+			</div>
+			<div class="column">
+				<img src="images\img5.jpg" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+			</div>
 		</div>
+		
+		
+		
+		
+		
+		 <section id="where-when">
+			<div class="container">
+				<!-- ROW-1 -->
+				<div class="row">
 
+					<!-- SECTION TITLE -->
+					<div class="col-md-offset-2 col-md-8 text-center">
+
+						<div class="section-title animation fadeInUp">
+							<h2>
+								시간과 장소
+							</h2>
+
+
+
+						</div>
+					</div>
+			   </div> <!-- END of ROW-1 -->
+
+			   <!-- ROW-2 -->
+				<div class="row">
+
+					<!-- SECTION TITLE -->
+					<div class="col-md-12 text-center">
+
+						<div class="banner-text dark full animation fadeIn">
+
+							  <div class="row">
+									<div class="col-md-4">
+										<h3>2017년 2월 25일</h3>
+									</div>
+									<div class="col-md-4">
+										<div class="border-column">
+											<h3>오후 1시 30분</h3>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<h3>해군호텔 W웨딩홀</h3>
+									</div>
+
+							  </div>
+
+
+						</div>
+
+					</div>
+			   </div> <!-- END of ROW-2 -->					
+				
+				<!-- ROW-3 -->
+				<div class="row">
+					<div id="map"></div>
+					<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=80b36ffa31a7f29761832d0d44f05e1d"></script>
+					<script>
+						var container = document.getElementById('map');
+						var options = {
+							center: new daum.maps.LatLng(35.561552, 129.348850),
+							level: 6
+						};
+
+						var map = new daum.maps.Map(container, options);
+						function setCenter(lat, lng)
+						{
+							map.setCenter(new daum.maps.LatLng(lat, lng));
+						}
+						
+						var marker = new daum.maps.Marker({
+							map: map,
+							position: new daum.maps.LatLng(35.561552, 129.348850)
+						});
+
+						var iwContent = '<div style="padding:2px; text-align:center;">동천컨벤션 웨딩홀</div>'		
+			/*			
+						var iwContent = '<div style="padding:5px;">동천컨벤션웨딩홀<br><a href="http://map.daum.net/link/map/동천컨벤션웨딩홀,35.561552,129.348850" style="color:blue" target="_blank">큰지도보기</a> <a href="http://map.daum.net/link/to/동천컨벤션웨딩홀,35.561552,129.348850" style="color:blue" target="_blank" font-family="돋움",dotum, "굴림", gulim, arial>길찾기</a></div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+			*/			
+						iwPosition = new daum.maps.LatLng(35.561552, 129.348850); //인포윈도우 표시 위치입니다
+
+						// 인포윈도우를 생성합니다
+						var infowindow = new daum.maps.InfoWindow({
+							position : iwPosition, 
+							content : iwContent 
+						});
+			  
+						infowindow.open(map, marker); 
+						// 마커 위에 인포윈도우를 표시합니다. 두번째 파라미터인 marker를 넣어주지 않으면 지도 위에 표시됩니다
+						
+					</script>
+					
+					<div class="de-icon circle small-size inline" style="background-color:#f0394d">
+						<i class="de-icon-address"></i>
+					</div>
+					<h3 class="inline">오시는 길</h3>
+					<ul>
+						<li>(44497) 울산광역시 중구 염포로 55 ( 남외동 865번지 )</li>
+						<li>TEL 052.282.3000</li>
+					</ul>
+
+					<div class="de-icon circle small-size inline" style="background-color:#f6700e">
+						<i class="de-icon-truck"></i>
+					</div>
+					<h3 class="inline">대중교통</h3>
+					<ul>
+						<li>울산시내버스<br>
+							신복R : 104, 114, 411 / 공업탑R : 106, 107, 411<br>
+							시외버스터미널 : 107, 127 / 기타 : 103, 123, 132</li>
+						<li>KTX 이용 시<br>
+							울산역에서 5003 리무진버스 탑승 -> 학성공원 하차 후, 시내버스 106, 107 환승<br>
+							울산역에서 5002 리무진버스 탑승 -> 학성초등학교 하차 후, 시내버스 환승 또는 도보 8분</li>
+					</ul>
+					
+					<div class="de-icon circle small-size inline" style="background-color:#9400d3">
+						<i class="de-icon-cab"></i>
+					</div>
+					<h3 class="inline">승용차</h3>
+					<ul>
+						<li>경부고속도로 이용시: 울산JC -> 울산IC -> 신복R 좌회전 -> 경주/교육청방면 -> 고가도로<br>
+						-> 동덕아파트 앞, 울산MBC방면 우회전 -> MBC사거리 좌회전 -> 복산사거리, 학성교 방면 우회전<br>
+						-> 반구사거리, 종합운동장방면 좌회전 -> 약 680m 직진</li>
+						<li>부산울산고속도로: 청량IC -> 두왕사거리, 시청 방면 좌회전 -> 공업탑R 우회전<br>
+						-> 터미널 사거리, 학성교 방면 좌회전 -> 반구사거리, 종합운동장 방면 우측방향 -> 약 725m 직진</li>
+					</ul>
+					
+				</div> <!-- END of ROW-3 -->
+			</div>
+		</section>		
+		
+		
 		<div id="myModal" class="modal">
 		  <span class="close cursor" onclick="closeModal()">&times;</span>
 		  <div class="modal-content">
 
 			<div class="mySlides">
-			  <div class="numbertext">1 / 4</div>
+			  <div class="numbertext">1 / 5</div>
 			  <img src="images\img1-1.jpg" style="width:100%">
 			</div>
 
 			<div class="mySlides">
-			  <div class="numbertext">2 / 4</div>
+			  <div class="numbertext">2 / 5</div>
 			  <img src="images\img2-1.jpg" style="width:100%">
 			</div>
 
 			<div class="mySlides">
-			  <div class="numbertext">3 / 4</div>
+			  <div class="numbertext">3 / 5</div>
 			  <img src="images\img3-1.jpg" style="width:100%">
 			</div>
 			
 			<div class="mySlides">
-			  <div class="numbertext">4 / 4</div>
+			  <div class="numbertext">4 / 5</div>
 			  <img src="images\img4-1.jpg" style="width:100%">
+			</div>
+			
+			<div class="mySlides">
+			  <div class="numbertext">5 / 5</div>
+			  <img src="images\img5-1.jpg" style="width:100%">
 			</div>
 			
 			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -72,31 +206,24 @@
 			  <p id="caption"></p>
 			</div>
 
-
-			<div class="slidecolumn">
-			  <img class="demo cursor" src="images\img1-1.jpg" style="width:100%" onclick="currentSlide(1)">
-			</div>
-			<div class="slidecolumn">
-			  <img class="demo cursor" src="images\img2-1.jpg" style="width:100%" onclick="currentSlide(2)">
-			</div>
-			<div class="slidecolumn">
-			  <img class="demo cursor" src="images\img3-1.jpg" style="width:100%" onclick="currentSlide(3)">
-			</div>
-			<div class="slidecolumn">
-			  <img class="demo cursor" src="images\img4-1.jpg" style="width:100%" onclick="currentSlide(4)"">
+			<div class="thumbnail">
+				<div class="slidecolumn">
+				  <img class="demo cursor" src="images\img1-1.jpg" style="width:100%" onclick="currentSlide(1)">
+				</div>
+				<div class="slidecolumn">
+				  <img class="demo cursor" src="images\img2-1.jpg" style="width:100%" onclick="currentSlide(2)">
+				</div>
+				<div class="slidecolumn">
+				  <img class="demo cursor" src="images\img3-1.jpg" style="width:100%" onclick="currentSlide(3)">
+				</div>
+				<div class="slidecolumn">
+				  <img class="demo cursor" src="images\img4-1.jpg" style="width:100%" onclick="currentSlide(4)">
+				</div>
+				<div class="slidecolumn">
+				  <img class="demo cursor" src="images\img5-1.jpg" style="width:100%" onclick="currentSlide(5)">
+				</div>
 			</div>
 		  </div>
-		  
-		  
-		  
-		  
-		  
-		  
-		  
-		  
-		  
-		  
-
 		</div>
 
 		<script>
@@ -143,55 +270,7 @@
 		
 		
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=80b36ffa31a7f29761832d0d44f05e1d"></script>
-		<script>
-			var container = document.getElementById('map');
-			var options = {
-				center: new daum.maps.LatLng(35.561552, 129.348850),
-				level: 6
-			};
-
-			var map = new daum.maps.Map(container, options);
-			function setCenter(lat, lng)
-			{
-				map.setCenter(new daum.maps.LatLng(lat, lng));
-			}
-			
-			var marker = new daum.maps.Marker({
-				map: map,
-				position: new daum.maps.LatLng(35.561552, 129.348850)
-			});
-
-			var iwContent = '<div style="padding:5px; text-align:center;">동천컨벤션 웨딩홀</div>'		
-/*			
-			var iwContent = '<div style="padding:5px;">동천컨벤션웨딩홀<br><a href="http://map.daum.net/link/map/동천컨벤션웨딩홀,35.561552,129.348850" style="color:blue" target="_blank">큰지도보기</a> <a href="http://map.daum.net/link/to/동천컨벤션웨딩홀,35.561552,129.348850" style="color:blue" target="_blank" font-family="돋움",dotum, "굴림", gulim, arial>길찾기</a></div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
-*/			
-			iwPosition = new daum.maps.LatLng(35.561552, 129.348850); //인포윈도우 표시 위치입니다
-
-			// 인포윈도우를 생성합니다
-			var infowindow = new daum.maps.InfoWindow({
-				position : iwPosition, 
-				content : iwContent 
-			});
-  
-			infowindow.open(map, marker); 
-			// 마커 위에 인포윈도우를 표시합니다. 두번째 파라미터인 marker를 넣어주지 않으면 지도 위에 표시됩니다
-			
-		</script>
-		
-		
-		
-		
-		
-		<div class="traffic_place">
+	<!-- 	<div class="traffic_place">
 			"동천컨벤션웨딩홀"
 			<span class="small">/ 아모르홀</span>
 		</div>
@@ -204,7 +283,6 @@
 		</div>
 		
 		<a href="tel:052-282-3000" class="traffic_tel_button">
-			<!-- <img src="images\phone.png"> -->
 			"웨딩홀 전화하기"
 		</a>
 		
@@ -216,7 +294,10 @@
 			<a href="#" onclick="navi_tmap(event);">
 				<img src="images\navigation_tmap.png">
 			</a>
-		</div>
+		</div> -->
+		
+		
+		
 
 		
 		
