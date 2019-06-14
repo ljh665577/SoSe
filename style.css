@@ -24,6 +24,7 @@ body {
 .slidecolumn {
   float: left;
   width: 20%;
+  padding: 1px;
 }
 
 /* The Modal (background) */
@@ -80,7 +81,7 @@ body {
 .next {
   cursor: pointer;
   position: absolute;
-  top: 100%;
+  top: 0%;
   width: auto;
   padding: 8px 16px;
   margin-top: -50px;
@@ -112,7 +113,7 @@ body {
   padding: 8px 12px;
   position: absolute;
   margin-top: -50px;
-  top: 100%;
+  top: 0%;
   left: 50%;
   transform:translate(-50%, 0%)
 }
@@ -130,7 +131,8 @@ img {
 }
 
 .demo {
-  opacity: 0.6;
+	opacity: 0.6;
+	height: 80px;
 }
 
 .active,
@@ -146,12 +148,6 @@ img.hover-shadow {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-
-#kimlink
-{
-	font-size: 45px;
-	text-align: center;
-}
 #map
 {
 	width:90%;
@@ -160,6 +156,7 @@ img.hover-shadow {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+	border: 1px solid #d3d3d3;
 }
 
 
@@ -259,4 +256,7 @@ h4.inline, h5.inline, h6.inline{
 .traffic_navigation img{
 	width:30px;
 	border: 1px solid #e3e3e3;
+}
+.lastimage img{
+	width:100%;
 }
