@@ -64,6 +64,10 @@ var days = Math.ceil((day2000 - today) / 1000 / 24 / 60 / 60);
 	background-color:white;
 }
 
+#ba{
+	text-align:left;
+}
+
 .b1{
 	font-size:15px
 	}
@@ -84,6 +88,7 @@ var days = Math.ceil((day2000 - today) / 1000 / 24 / 60 / 60);
 .row{
 	font-size:20px;
 	background-color:ivory;
+	text-align:center;
 	}
 </style>
 
@@ -134,7 +139,7 @@ var days = Math.ceil((day2000 - today) / 1000 / 24 / 60 / 60);
 	
 	<div class="abcdb">
 	<br><br><br><br>
-	
+	<span id="ba"><img src="바.png" width="350px"><br><br></span>
 	<span class="groom">- GROOM</span> <span class="name">심운보 & 이선희</sapn> 
 	<span class="bride">BRIDE -</span>
 	<p>
@@ -161,7 +166,7 @@ var days = Math.ceil((day2000 - today) / 1000 / 24 / 60 / 60);
 		  <div class="column">
 			<img src="images\img4.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
 		  </div>
-		  
+		  <img src="location.png" width="380px">
 		  <div id="map"></div>
 </div>
 
