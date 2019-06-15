@@ -1,5 +1,6 @@
 body {
-	background-color: #ededed;
+/* 	background-color: #ededed; */
+	margin:0px;
 }
 
 * {
@@ -8,7 +9,7 @@ body {
 
 .rowxx > .column {
   padding: 10px 10px;
-  background-color: white;
+  background-color: #fffff7;
 }
 
 .column {
@@ -260,3 +261,85 @@ h4.inline, h5.inline, h6.inline{
 .lastimage img{
 	width:100%;
 }
+
+.grid{
+	display:grid;
+	grid-template-rows: 500px 650px 200px 100px;
+}
+
+.mine{
+	text-align:center;
+	color:gray;	
+	}
+
+.gallery{
+	text-align:center;
+	color:gray;
+}
+
+.bg{
+	background:url('k1.jpg') no-repeat top / cover;
+	overflow:hidden;
+	border:0px solid pink;
+}
+	
+.WEDDING{
+	font-family: 'Quattrocento', serif;
+	font-size:20px;
+	font-weight:900;
+	letter-spacing:0.45em
+	}	
+.Dday{
+	font-size:20px;
+	font-weight:900;
+	}
+	
+.simkim{
+	font-size:20px;
+	font-weight:900;
+	}	
+.abcd{
+	font-size:20px
+	}
+	
+.comment{
+	background-color:ivory;
+	font-size:14px;
+	line-height:250%;
+	}
+	
+.abcdb{
+	background-color:ivory;
+	border-top: 1px solid #e3e3e3;
+}
+.abcdc{
+	background-color:ivory;
+}
+
+#ba{
+	text-align:left;
+}
+
+.b1{
+	font-size:15px
+	}
+.b2{
+	font-size:15px
+	
+}
+.groom{
+	font-size:11px
+}	
+.bride{
+	font-size:11px
+}
+.name{
+	font-size:30px
+}
+	
+.row{
+	font-size:20px;
+	background-color:white;
+	text-align:center;
+/*	border-top: 1px solid #e3e3e3;*/
+	}
