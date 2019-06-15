@@ -235,9 +235,9 @@ h4.inline, h5.inline, h6.inline{
 .text-center{
 	display:block;
 	width:80%;
-	border-bottom-style:double;
+/*	border-bottom-style:double;
 	border-bottom-color:rgb(106, 106, 106);
-	border-bottom-width: medium;
+	border-bottom-width: medium;*/
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
