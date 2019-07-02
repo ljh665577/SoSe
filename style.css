@@ -286,7 +286,7 @@ h4.inline, h5.inline, h6.inline{
 
 .mine{
 	text-align:center;
-	color:#a15050;	
+	color:#fad4d4;	
 	}
 .weddinginvitation{
 	color:white;
@@ -298,7 +298,7 @@ h4.inline, h5.inline, h6.inline{
 }
 
 .bg{
-	background:url('First.jpg') no-repeat top / cover;
+	background:url('First.jpg') no-repeat 0% 50% / cover ;
 	overflow:hidden;
 	border:0px solid pink;
 }
@@ -326,6 +326,7 @@ h4.inline, h5.inline, h6.inline{
 	background-color:ivory;
 	font-size:14px;
 	line-height:250%;
+	color:black;	
 	}
 	
 .abcdb{
