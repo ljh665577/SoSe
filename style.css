@@ -313,9 +313,13 @@ h4.inline, h5.inline, h6.inline{
 	letter-spacing:0.45em
 	}	
 .Dday{
-	font-size:20px;
+	font-size:30px;
 	font-weight:900;
 	}
+.Dday{
+	
+	line-height: 80%;
+}
 	
 .simkim{
 	font-size:24px;
@@ -324,6 +328,9 @@ h4.inline, h5.inline, h6.inline{
 .abcd{
 	font-size:20px
 	}
+.abcd p{
+	line-height: 80%;
+}
 	
 .comment{
 	background-color:ivory;
