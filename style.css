@@ -14,7 +14,7 @@ body {
 
 .column {
 /*	float: left;	*/
-  width: 80%;
+  width: 75%;
   margin:40px;
   margin-left:auto;
   margin-right:auto;
@@ -286,19 +286,22 @@ h4.inline, h5.inline, h6.inline{
 
 .mine{
 	text-align:center;
-	color:#fad4d4;	
+	color:white;	
 	}
 .weddinginvitation{
 	color:white;
 }
-
+/*#ffd4d4*/
 .gallery{
 	text-align:center;
 	color:gray;
 }
 
 .bg{
-	background:url('First.jpg') no-repeat 0% 50% / cover ;
+	background-image: url('First.jpg');
+	background-repeat: no-repeat;
+	background-position: top;
+	background-size: cover;
 	overflow:hidden;
 	border:0px solid pink;
 }
@@ -315,7 +318,7 @@ h4.inline, h5.inline, h6.inline{
 	}
 	
 .simkim{
-	font-size:20px;
+	font-size:24px;
 	font-weight:900;
 	}	
 .abcd{
@@ -324,7 +327,8 @@ h4.inline, h5.inline, h6.inline{
 	
 .comment{
 	background-color:ivory;
-	font-size:14px;
+	font-size:16px;
+	font-family: 'Nanum Myeongjo', serif;
 	line-height:250%;
 	color:black;	
 	}
@@ -342,10 +346,10 @@ h4.inline, h5.inline, h6.inline{
 }
 
 .b1{
-	font-size:15px
+	font-size:18px
 	}
 .b2{
-	font-size:15px
+	font-size:12px
 	
 }
 .groom{
@@ -355,7 +359,10 @@ h4.inline, h5.inline, h6.inline{
 	font-size:11px
 }
 .name{
-	font-size:30px
+	font-size:30px;
+	font-weight:500;
+	vertical-align:middle;
+/*	font-family: 'Sunflower', sans-serif;*/
 }
 	
 .row{
